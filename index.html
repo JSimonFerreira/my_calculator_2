@@ -12,9 +12,14 @@
 		        <button onclick="inverse()"> 1/x </button>
 			<button onclick="square()"> x² </button>
 			<button onclick="cube()"> x³ </button>
+                        <button onclick="power_4()"> x⁴ </button>
 			<button onclick="sine()"> sin </button>
 		</p>
 		<script type="text/javascript">
+			function inverse() {
+                                var num = document.getElementById("n1");
+                                num.value = 1/num.value;
+                        }
 			function square(){
                                 var num = document.getElementById("n1");
                                 num.value = Math.pow(num.value,2);
@@ -23,13 +28,13 @@
 				var num = document.getElementById("n1");
 				num.value = Math.pow(num.value,3);
 			}
-                        function inverse() {
-                                var num = document.getElementById("n1");
-                                num.value = 1/num.value;
-                        }
-			function sine(){
+			function power_4() {
 				var num = document.getElementById("n1");
-				num.value = Math.sin(num.value)
+				num.value = Math.pow(num.value,4);
+			}
+                        function sine(){
+                                var num = document.getElementById("n1");
+                                num.value = Math.sin(num.value)
 			}
 		</script>
 	</body>
